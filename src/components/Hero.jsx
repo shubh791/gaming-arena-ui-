@@ -44,8 +44,8 @@ export default function Hero() {
   }, [activeIdx, char.accent]);
 
   return (
-    <section ref={sectionRef} style={{ 
-      position: "relative", width: "100%", height: "100vh", background: "#000", 
+    <section ref={sectionRef} id="home" style={{
+      position: "relative", width: "100%", height: "100vh", background: "#000",
       overflow: "hidden", display: "flex", alignItems: "center", color: "white"
     }}>
       

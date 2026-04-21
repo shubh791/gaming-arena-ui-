@@ -58,7 +58,7 @@ export default function Champions() {
   const prev = () => changeIdx((activeIdx - 1 + CHARS.length) % CHARS.length);
 
   return (
-    <section style={{
+    <section id="champions" style={{
       background: "#010101", minHeight: "100vh", color: "white",
       padding: "80px 5% 60px", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
       position: "relative", overflow: "hidden"

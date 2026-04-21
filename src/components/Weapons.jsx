@@ -45,7 +45,7 @@ const WEAPONS = [
 
 export default function WeaponsLab() {
   return (
-    <section style={{ background: "#000", padding: "120px 0", overflow: "hidden", position: "relative" }}>
+    <section id="weapons" style={{ background: "#000", padding: "120px 0", overflow: "hidden", position: "relative" }}>
       
       {/* Background Static Grid */}
       <div style={{ position: "absolute", inset: 0, backgroundImage: `radial-gradient(#1a1a1a 1px, transparent 1px)`, backgroundSize: "50px 50px", opacity: 0.3 }} />

@@ -72,11 +72,11 @@ export default function Store() {
   }, []);
 
   return (
-    <section ref={sectionRef} style={{ 
-      background: "#020202", 
-      padding: "120px 0", 
-      position: "relative", 
-      overflow: "visible" // Changed from hidden to prevent card clipping
+    <section ref={sectionRef} id="store" style={{
+      background: "#020202",
+      padding: "120px 0",
+      position: "relative",
+      overflow: "visible"
     }}>
       
       {/* ── AMBIENT BACKGROUND GLOW ── */}

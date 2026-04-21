@@ -74,9 +74,9 @@ export default function HyperTacticalBattles() {
   }, []);
 
   return (
-    <section ref={sectionRef} style={{ 
-      background: "#050505", minHeight: "120vh", position: "relative", 
-      overflow: "hidden", color: "white", padding: "150px 0" 
+    <section ref={sectionRef} id="battles" style={{
+      background: "#050505", minHeight: "120vh", position: "relative",
+      overflow: "hidden", color: "white", padding: "150px 0"
     }}>
       
       {/* BACKGROUND ELEMENTS */}
