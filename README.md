@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Gaming Arena — Premium Gaming UI Concept
+
+> A high-fidelity, dark-theme gaming platform landing page built with Next.js, GSAP, and Tailwind CSS. This is a **UI design prototype** — all interactions are visual only.
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 16 (App Router) |
+| Animations | GSAP 3 + ScrollTrigger |
+| Styling | Tailwind CSS v4 + Inline Styles |
+| Icons | Lucide React + React Icons |
+| Font | Geist Sans / Geist Mono |
+| Language | JavaScript (JSX) |
+
+---
+
+## Sections
+
+- **Navbar** — Fixed HUD-style nav with glassmorphism on scroll, animated mobile overlay
+- **Hero** — Auto-cycling character showcase with GSAP flash/slide transitions
+- **Champions** — Interactive 3-panel selector with glass cylinder, warp-in animation, thumbnail carousel
+- **Weapons** — Arsenal showcase cards with permanent glow effects and floating character art
+- **Battles** — Live combat feed section with stats shards and battle mode cards
+- **Store** — Tier pricing cards with clip-path polygons and hover glow
+- **Contact** — Encrypted transmission form with focus glow effects
+- **Footer** — Developer credit, nav links, back-to-top
+
+---
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Clone the repository
+git clone https://github.com/shubh791/gaming-arena.git
+cd gaming-arena
+
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+```
+gaming-arena/
+├── app/
+│   ├── layout.js            # Root layout with fonts and metadata
+│   ├── page.js              # Page entry — renders all sections
+│   ├── globals.css          # Tailwind v4 + design tokens
+│   └── icon.svg             # Favicon
+├── src/
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── Hero.jsx
+│   │   ├── Champions.jsx
+│   │   ├── Weapons.jsx
+│   │   ├── Battles.jsx
+│   │   ├── Store.jsx
+│   │   ├── Contact.jsx
+│   │   ├── Footer.jsx
+│   │   └── UIOnlyToast.jsx  # Modal shown on non-functional button clicks
+│   └── lib/
+│       ├── gsap.js           # GSAP + ScrollTrigger setup
+│       └── uiOnly.js         # CustomEvent dispatcher for UI-only interactions
+└── public/
+    └── hero/                 # Character images
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Design Notes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- All colors, spacing, and clip-paths are applied via inline `style` props for render-critical reliability
+- GSAP animations use `clearProps: "all"` after entrance animations to prevent stale opacity/transform values
+- `UIOnlyToast` listens for a global `ui-only-click` CustomEvent — any component can trigger the modal by calling `uiOnly()` without prop-drilling
+- The project uses `"use client"` on all interactive components; the root layout stays as a Server Component
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Author
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Shubham Panghal**
+Frontend Engineer & UI Designer
+
+- GitHub: [github.com/shubh791](https://github.com/shubh791)
+- LinkedIn: [linkedin.com/in/shubham-panghal](https://www.linkedin.com/in/shubham-panghal/)
+- Email: shubhampanghal.work@gmail.com
+
+---
+
+## License
+
+MIT — free to use for inspiration or learning. If you want a custom version built for your brand, reach out.
